@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.box{
+    max-width: 400px;
+    margin: auto;
+}
