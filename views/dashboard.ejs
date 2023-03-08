@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head', {title: "Dashboard"}) %> 
+<%- include('partials/head', {title: "Dashboard", user: user}) %> 
 <body>
     <div class="flex-grow-1">
       <%- include('partials/navbar') %> 
+
+      <div class="container mt-3">
+
+        <h4 class="text-center">Welcome <%= user.name %></h4>
+
+        <div class="row">
+
+          <div class="col">
+            <h6 class="text-center">Temperature</h6>
+            <div>
+              <canvas height="125px" id="temperature"></canvas>
+            </div>
+          </div>
+
+          <div class="col">
+            <h6 class="text-center">Speed</h6>
+            <div>
+              <canvas height="125px" id="speed"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-2">
+          <div class="col">
+            <h6 class="text-center">Current</h6>
+            <div>
+              <canvas height="125px" id="current"></canvas>
+            </div>
+          </div>
+
+          <div class="col">
+            <h6 class="text-center">Vibration</h6>
+            <div>
+              <canvas height="125px" id="vibration"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <%- include('partials/footer') %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
