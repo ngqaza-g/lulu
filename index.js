@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const create_admin = require('./modules/create_admin');
 require('dotenv').config();
-
+require('./modules/mqtt_client');
 const app = express();
 
 app.set('view engine', 'ejs');

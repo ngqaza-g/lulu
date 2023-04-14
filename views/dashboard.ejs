@@ -5,44 +5,62 @@
     <div class="flex-grow-1">
       <%- include('partials/navbar') %> 
 
-      <div class="container mt-3">
+      <div class="container-fluid mt-3">
 
         <h4 class="text-center">Welcome <%= user.name %></h4>
 
         <div class="row">
-
-          <div class="col">
-            <h6 class="text-center">Temperature</h6>
-            <div>
-              <canvas height="125px" id="temperature"></canvas>
+          <div class="col-2">
+            <h6 class="my-3">Motor Status: Running</h6>
+            <h6 class="my-3">Mist Pump Status: Running</h6>
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="card-title">General Alarm</div>
+                <div id="smoke_led" class="led_wrapper">
+                  <div class="led m-auto">
+                    <div></div>
+                  </div> 
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="col">
-            <h6 class="text-center">Speed</h6>
-            <div>
-              <canvas height="125px" id="speed"></canvas>
+          <div class="col-10">
+              <div class="row">
+      
+                <div class="col">
+                  <h6 class="text-center">Temperature</h6>
+                  <div>
+                    <canvas height="125px" id="temperature"></canvas>
+                  </div>
+                </div>
+      
+                <div class="col">
+                  <h6 class="text-center">Speed</h6>
+                  <div>
+                    <canvas height="125px" id="speed"></canvas>
+                  </div>
+                </div>
+      
+              </div>
+      
+              <div class="row mt-2">
+                <div class="col">
+                  <h6 class="text-center">Current</h6>
+                  <div>
+                    <canvas height="125px" id="current"></canvas>
+                  </div>
+                </div>
+      
+                <div class="col">
+                  <h6 class="text-center">Vibration</h6>
+                  <div>
+                    <canvas height="125px" id="vibration"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-
+          </div>  
         </div>
-
-        <div class="row mt-2">
-          <div class="col">
-            <h6 class="text-center">Current</h6>
-            <div>
-              <canvas height="125px" id="current"></canvas>
-            </div>
-          </div>
-
-          <div class="col">
-            <h6 class="text-center">Vibration</h6>
-            <div>
-              <canvas height="125px" id="vibration"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <%- include('partials/footer') %>
 

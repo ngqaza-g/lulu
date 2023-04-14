@@ -25,7 +25,11 @@ router.get('/dashboard', validate_token, (req, res)=>{
 router.get('/logout', validate_token, (req, res)=>{
     res.clearCookie('token');
     res.redirect('login');
-})
+});
+
+router.get('/trends', validate_token, (req, res)=>{
+
+});
 router.post('/login', validate_token, login);
 router.post('/register', validate_token, register);
 
