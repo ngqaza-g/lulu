@@ -11,16 +11,17 @@
 
         <div class="row">
           <div class="col-2">
-            <h6 class="my-3">Motor Status: Running</h6>
-            <h6 class="my-3">Mist Pump Status: Running</h6>
+            <h6 id="motor_status" class="my-3">Motor Status: <span id="motor_status"></span>Stopped</h6>
+            <h6 class="my-3">Mist Pump Status: <span id="pump_status">Stopped</span></h6>
             <div class="card text-center">
               <div class="card-body">
                 <div class="card-title">General Alarm</div>
-                <div id="smoke_led" class="led_wrapper">
+                <div id="alarm_led" class="led_wrapper">
                   <div class="led m-auto">
                     <div></div>
                   </div> 
                 </div>
+                <div id="error_message"></div>
               </div>
             </div>
           </div>

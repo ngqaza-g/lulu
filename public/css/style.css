@@ -7,7 +7,14 @@ body{
     max-width: 400px;
     margin: auto;
 }
-
+.led_wrapper{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
 .led{
     width: 50px;
     height: 50px;
