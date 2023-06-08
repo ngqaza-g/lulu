@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('partials/head', {title: "Register"}) %> 
 
-<body>
+<body class="bg-dark text-white">
     <div class="container flex-grow-1">
         <div class="my-3">
             <h3 class="text-center">Sign Up</h3>
@@ -19,16 +19,16 @@
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Name...">
+                    <input type="text" name="name" class="form-control bg-dark text-white" id="name" placeholder="Name...">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="someone@somewhere.com">
+                    <input type="email" name="email" class="form-control bg-dark text-white" id="email" placeholder="someone@somewhere.com">
                 </div>
 
                 <div class="mb-3">
                     <label for="user_type" class="form-label">User Type</label>
-                    <select id="'user_type" class="form-select" name="role">
+                    <select id="'user_type" class="form-select bg-dark text-white" name="role">
                         <option value="user" selected>User</option>
                         <option value="admin">Admin</option>
                     </select>

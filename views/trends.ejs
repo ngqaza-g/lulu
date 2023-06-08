@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head', {title: "Trends"}) %> 
+    <body>
+        <%- include('partials/navbar') %> 
+        <div class="flex-grow-1">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col">
+                      <h6 class="text-center">Temperature</h6>
+                      <div>
+                        <canvas height="125px" id="temperature"></canvas>
+                      </div>
+                    </div>
+          
+                    <div class="col">
+                      <h6 class="text-center">Speed</h6>
+                      <div>
+                        <canvas height="125px" id="speed"></canvas>
+                      </div>
+                    </div>
+          
+                  </div>
+          
+                  <div class="row mt-2">
+                    <div class="col">
+                      <h6 class="text-center">Current</h6>
+                      <div>
+                        <canvas height="125px" id="current"></canvas>
+                      </div>
+                    </div>
+          
+                    <div class="col">
+                      <h6 class="text-center">Vibration</h6>
+                      <div>
+                        <canvas height="125px" id="vibration"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <%- include('partials/footer') %>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+        <script src="/js/trends.js"></script>
+    </body>
+</html>

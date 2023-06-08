@@ -2,6 +2,7 @@ const express = require('express');
 const validate_token = require('../modules/auth/validate_token');
 const login = require('../modules/auth/login');
 const register = require('../modules/auth/register');
+const trends = require('../modules/trends');
 
 const router = express.Router();
 
@@ -28,8 +29,11 @@ router.get('/logout', validate_token, (req, res)=>{
 });
 
 router.get('/trends', validate_token, (req, res)=>{
-
+    req.user ? res.render('trends', {user: req.user}) : res.render('login', {error: null});
 });
+
+router.get('/trends/data', validate_token, trends);
+
 router.post('/login', validate_token, login);
 router.post('/register', validate_token, register);
 
