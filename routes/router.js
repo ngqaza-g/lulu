@@ -3,6 +3,7 @@ const validate_token = require('../modules/auth/validate_token');
 const login = require('../modules/auth/login');
 const register = require('../modules/auth/register');
 const trends = require('../modules/trends');
+const Alarm = require('../models/Alarms');
 
 const router = express.Router();
 
@@ -30,6 +31,11 @@ router.get('/logout', validate_token, (req, res)=>{
 
 router.get('/trends', validate_token, (req, res)=>{
     req.user ? res.render('trends', {user: req.user}) : res.render('login', {error: null});
+});
+
+router.get('/alarms', validate_token, async(req, res)=>{
+    const alarms = await Alarm.find();
+    req.user ? res.render('alarms', {user: req.user, alarms: alarms}) : res.render('login', {error: null});
 });
 
 router.get('/trends/data', validate_token, trends);
